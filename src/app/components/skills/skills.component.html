@@ -1,0 +1,104 @@
+<section id="skills" class="skills section">
+  <div class="container">
+    <h2 class="section-title">Skills & Expertise</h2>
+    
+    <div class="skills-content">
+      <!-- Technical Skills -->
+      <div class="skills-category">
+        <h3 class="category-title">
+          <i class="fas fa-laptop-code"></i>
+          Technical Skills
+        </h3>
+        <div class="skills-grid">
+          <div *ngFor="let skill of technicalSkills" class="skill-item">
+            <div class="skill-header">
+              <div class="skill-info">
+                <i [class]="skill.icon" [style.color]="skill.color"></i>
+                <span class="skill-name">{{ skill.name }}</span>
+              </div>
+              <span class="skill-percentage">{{ skill.percentage }}%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" 
+                   [attr.data-percentage]="skill.percentage"
+                   [style.background-color]="skill.color">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Tools & Technologies -->
+      <div class="skills-category">
+        <h3 class="category-title">
+          <i class="fas fa-tools"></i>
+          Tools & Technologies
+        </h3>
+        <div class="tools-grid">
+          <div *ngFor="let tool of tools" class="tool-item">
+            <i [class]="tool.icon"></i>
+            <span>{{ tool.name }}</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Certifications -->
+      <div class="skills-category">
+        <h3 class="category-title">
+          <i class="fas fa-trophy"></i>
+          Achievements
+        </h3>
+        <div class="certifications-grid">
+          <div *ngFor="let cert of certifications" class="certification-card">
+            <div class="cert-icon">
+              <i [class]="cert.icon"></i>
+            </div>
+            <div class="cert-info">
+              <h4 class="cert-name">{{ cert.name }}</h4>
+              <p class="cert-issuer">{{ cert.issuer }}</p>
+              <span class="cert-year">{{ cert.year }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Soft Skills -->
+      <div class="skills-category">
+        <h3 class="category-title">
+          <i class="fas fa-users"></i>
+          Soft Skills
+        </h3>
+        <div class="soft-skills">
+          <div class="soft-skill">
+            <div class="skill-circle">
+              <i class="fas fa-comments"></i>
+            </div>
+            <h4>Communication</h4>
+            <p>Excellent verbal and written communication skills</p>
+          </div>
+          <div class="soft-skill">
+            <div class="skill-circle">
+              <i class="fas fa-users-cog"></i>
+            </div>
+            <h4>Team Leadership</h4>
+            <p>Experience leading development teams and projects</p>
+          </div>
+          <div class="soft-skill">
+            <div class="skill-circle">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <h4>Problem Solving</h4>
+            <p>Strong analytical and creative problem-solving abilities</p>
+          </div>
+          <div class="soft-skill">
+            <div class="skill-circle">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h4>Time Management</h4>
+            <p>Efficiently manage multiple projects and deadlines</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,91 @@
+<section id="about" class="about section">
+  <div class="container">
+    <h2 class="section-title">About Me</h2>
+    
+    <div class="about-content">
+      <div class="about-image">
+        <div class="image-container">
+          <div class="about-photo">
+            <div class="photo-placeholder">
+              <img src="assets/profile.jpg" alt="Profile Picture">
+             
+            </div>
+          </div>
+          <div class="experience-badge">
+            <span class="badge-number">1+</span>
+            <span class="badge-text">Years<br>Experience</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="about-text">
+        <h3 class="about-title">I'm a Passionate Backend Engineer Who Loves Building Scalable Applications</h3>
+        <p class="about-description">
+          Completed Bachelor of Technology in Computer Science from Netaji Subhas University of Technology, 
+          New Delhi. I specialize in backend development with expertise in Nest.js, Flutter, and cloud technologies. 
+          With hands-on experience in building REST APIs and working in Agile environments, I focus on creating 
+          efficient and scalable solutions.
+        </p>
+        <p class="about-description">
+          I'm passionate about problem-solving and have solved 350+ Data Structures and Algorithms problems across 
+          various platforms. When I'm not coding, you can find me playing football - I'm the Vice-Captain of NSUT 
+          Football Team and have won a Silver medal in intra-University competitions.
+        </p>
+        
+        <div class="skills-summary">
+          <div class="skill-item">
+            <i class="fas fa-code"></i>
+            <span>Frontend Development</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-server"></i>
+            <span>Backend Development</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-mobile-alt"></i>
+            <span>Responsive Design</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-database"></i>
+            <span>Database Management</span>
+          </div>
+        </div>
+        
+        <div class="about-buttons">
+          <a href="#contact" class="btn btn-outline">
+            <i class="fas fa-envelope"></i>
+            Let's Connect
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Stats Section -->
+    <div class="stats-container">
+      <div class="stats-grid">
+        <div *ngFor="let stat of stats" class="stat-card">
+          <div class="stat-number">{{ stat.number }}</div>
+          <div class="stat-label">{{ stat.label }}</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Experience Timeline -->
+    <div class="experience-section">
+      <h3 class="experience-title">My Journey</h3>
+      <div class="timeline">
+        <div *ngFor="let exp of experiences; let i = index" class="timeline-item" 
+             [class.left]="i % 2 === 0" [class.right]="i % 2 === 1">
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h4 class="job-title">{{ exp.title }}</h4>
+              <span class="company">{{ exp.company }}</span>
+            </div>
+            <div class="period">{{ exp.period }}</div>
+            <p class="job-description">{{ exp.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

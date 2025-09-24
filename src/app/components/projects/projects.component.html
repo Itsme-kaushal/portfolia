@@ -1,0 +1,94 @@
+<section id="projects" class="projects section">
+  <div class="container">
+    <h2 class="section-title">My Projects</h2>
+    <p class="section-subtitle">Here are some of the projects I've worked on recently</p>
+    
+    <!-- Filter Buttons -->
+    <div class="filter-buttons">
+      <button *ngFor="let category of categories"
+              class="filter-btn"
+              [class.active]="selectedCategory === category"
+              (click)="filterProjects(category)">
+        {{ category }}
+      </button>
+    </div>
+    
+    <!-- Featured Projects -->
+    <div class="featured-section">
+      <h3 class="featured-title">Featured Projects</h3>
+      <div class="featured-projects">
+        <div *ngFor="let project of filteredProjects.slice(0, 2)" class="featured-project">
+          <div class="project-image">
+            <div class="image-placeholder">
+              <img src="{{ project.image }}" class="project-img">
+              <!-- <i class="fas fa-image"></i> -->
+            </div>
+            <div class="project-overlay">
+              <div class="project-links">
+                <button class="project-link" (click)="openProject(project.githubUrl)">
+                  <i class="fab fa-github"></i>
+                </button>
+                <button class="project-link" (click)="openProject(project.liveUrl)">
+                  <i class="fas fa-external-link-alt">Liveurl</i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-category">{{ project.category }}</div>
+            <h4 class="project-title">{{ project.title }}</h4>
+            <p class="project-description">{{ project.description }}</p>
+            <div class="project-technologies">
+              <span *ngFor="let tech of project.technologies" class="tech-tag">{{ tech }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- All Projects Grid -->
+    <div class="projects-grid">
+      <div *ngFor="let project of filteredProjects" class="project-card">
+        <div class="project-image">
+          <div class="image-placeholder">
+            <img src="{{ project.image }}" alt="{{ project.title }}" class="project-img">
+            <!-- <i class="fas fa-laptop-code"></i> -->
+          </div>
+          <div class="project-overlay">
+            <div class="project-info">
+              <h4 class="project-title">{{ project.title }}</h4>
+              <p class="project-description">{{ project.description }}</p>
+            </div>
+            <div class="project-links">
+              <button class="project-link" (click)="openProject(project.githubUrl)">
+                <i class="fab fa-github"></i>
+                <span>Code</span>
+              </button>
+              <button class="project-link" (click)="openProject(project.liveUrl)">
+                <i class="fas fa-external-link-alt"></i>
+                <span>Live</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="project-footer">
+          <div class="project-technologies">
+            <span *ngFor="let tech of project.technologies.slice(0, 3)" class="tech-tag">{{ tech }}</span>
+            <span *ngIf="project.technologies.length > 3" class="tech-more">+{{ project.technologies.length - 3 }}</span>
+          </div>
+          <div class="project-category">{{ project.category }}</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Call to Action -->
+    <div class="projects-cta">
+      <h3>Interested in working together?</h3>
+      <p>I'm always open to discussing new opportunities and exciting projects.</p>
+      <a href="#contact" class="btn btn-primary">
+        <i class="fas fa-envelope"></i>
+        Let's Talk
+      </a>
+    </div>
+  </div>
+</section>

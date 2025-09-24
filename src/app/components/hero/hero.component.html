@@ -1,0 +1,77 @@
+<section id="home" class="hero">
+  <div class="hero-background">
+    <div class="hero-particles"></div>
+  </div>
+  
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title animate-fade-up">
+          Hi, I'm <span class="gradient-text">Kaushal Singh</span>
+        </h1>
+        <div class="hero-subtitle animate-fade-up">
+          <span class="role-text">{{ currentRole }}</span>
+          <span class="cursor">|</span>
+        </div>
+        <p class="hero-description animate-fade-up">
+          Fullstack Developer with expertise in Nest.js, Flutter, Angular and cloud technologies. 
+          I build scalable applications and solve complex problems with clean, efficient code.
+        </p>
+        <div class="hero-buttons animate-fade-up">
+          <button class="btn btn-primary" (click)="scrollToProjects()">
+            <i class="fas fa-rocket"></i>
+            My Projects
+          </button>
+          <button class="btn btn-outline" (click)="scrollToContact()">
+            <i class="fas fa-envelope"></i>
+            Get In Touch
+          </button>
+        </div>
+        <div class="social-links animate-fade-up">
+          <a href="https://github.com/itsme-kaushal" target="_blank" class="social-link">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://in.linkedin.com/in/kaushal-singh-a536101b3" target="_blank" class="social-link">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://leetcode.com/kakarotcodes" target="_blank" class="social-link">
+            <i class="fas fa-code"></i>
+          </a>
+          <a href="mailto:singhkaushal500&#64;gmail.com" class="social-link">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div class="hero-image animate-fade-right">
+        <div class="profile-card">
+          <div class="profile-image">
+            <div class="image-placeholder">
+              <img src="assets/profile.jpg" alt="Profile Picture">
+            </div>
+          </div>
+          <div class="floating-icons">
+            <div class="floating-icon icon-1">
+              <i class="fab fa-js-square"></i>
+            </div>
+            <div class="floating-icon icon-2">
+              <i class="fab fa-angular"></i>
+            </div>
+            <div class="floating-icon icon-3">
+              <i class="fab fa-react"></i>
+            </div>
+            <div class="floating-icon icon-4">
+              <i class="fab fa-node-js"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="scroll-indicator">
+    <div class="scroll-arrow">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </div>
+</section>
