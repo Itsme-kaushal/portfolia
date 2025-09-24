@@ -138,7 +138,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Kaushal Singh - singhkaushal500@gmail.com
 
-Project Link: [https://github.com/kaushalsingh/portfolio-website](https://glowing-pavlova-5c3a70.netlify.app/)
+Project Link: [https://glowing-pavlova-5c3a70.netlify.app/](https://glowing-pavlova-5c3a70.netlify.app/)
 
 ---
 
