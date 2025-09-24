@@ -5,9 +5,6 @@
 /dist/
 /out-tsc/
 
-# Angular environment files
-/src/environments/*.ts
-
 # IDE files
 /.vscode/
 /.idea/
